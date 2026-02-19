@@ -34,10 +34,10 @@ npm start
 - CSS3
 - JavaScript (Vanilla)
 
+## To start on live server
+1. http://127.0.0.1:5500/CRUD%20OPERATION%20TODO%20List/index.html
+2.open this link in live server to see the output of the project.
+ 
 ## License
 MIT
-
-##To start on live server
-```
-1. http://127.0.0.1:5500/CRUD%20OPERATION%20TODO%20List/index.html
-2.open this link in live server to see the output of the project. ```
+`

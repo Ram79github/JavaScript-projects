@@ -26,10 +26,11 @@ npm start
 - CSS3
 - JavaScript (Vanilla)
 
-##TO start on live server
+## TO start on live server
 ```
 1.http://127.0.0.1:3000/hii/index.html
-2.open this link in live server to see the output of the project. ```
+2.open this link in live server to see the output of the project. 
+```
 
 ## License
 MIT
