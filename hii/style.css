@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(270deg, #4cdcb1, #e9481c, #b417fd, #0fb9db);
+    animation: gradientShift 15s ease infinite;
+    background-size: 400% 400%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background:linear-gradient(150deg, #3656e5 0%, #869396 ,#3656e5 100%);
+    animation: gradientShift 8s ease infinite;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.search-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #2443dd;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #6a9ef3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.search-btn:active {
+    transform: translateY(0);
+}
+
+#weather-info {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    animation: slideUp 0.5s ease;
+}
+
+#weather-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+#weather-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    text-align: center;
+    opacity: 0.95;
+}
+
+.temp-info::before {
+    content: "🌡️ ";
+    margin-right: 8px;
+}
+
+.desc-info::before {
+    content: "🌤️ ";
+    margin-right: 8px;
+}
+
+#error-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    animation: slideUp 0.5s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .search-section {
+        flex-direction: column;
+    }
+}
+
+.description {
+    position: relative;
+    padding-left: 35px; /* Adjust padding for icon space */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Weather Icon Classes */
+.icon-sunny {
+    width: 24px;
+    height: 24px;
+    background-image: url('./assests%20weather%20icon/sunny.jpg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.icon-cloud {
+    width: 24px;
+    height: 24px;
+    background-image: url('./assests%20weather%20icon/cloud.jpg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.icon-overcast {
+    width: 24px;
+    height: 24px;
+    background-image: url('./assests%20weather%20icon/overcast.jpg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.icon-rainy {
+    width: 24px;
+    height: 24px;
+    background-image: url('./assests%20weather%20icon/rainy.jpg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 8px;
+}
