@@ -32,12 +32,6 @@ DATABASE_URL=your_database_url
 4. Push to the branch
 5. Open a pull request
 
-## To start on live server
-``` 
-1. http://127.0.0.1:3000/ECOMM/index.html
-2. Open this link in live server to see the output of the project. 
-```
-
 ## License
 
 MIT License
