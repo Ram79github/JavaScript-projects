@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    *{
+      padding:0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+ .div-Box{
+  width: 100%;
+  height: 100%;
+ }
+ #form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 400px;
+  background: #ffffff10;
+  padding: 24px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(30, 16, 70, 0.08);
+ }
+  .card {
+  margin-top: 20px;
+  height: 100%;
+  width: 100%;
+  background: #373434;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  color:white;
+}
+
+.profile-img {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #470aef;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.card h5 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+}
+
+  </style>
+<body>
+  <div class="div-Box">
+    <form id="form">
+      <input type="text" placeholder="Profile image URL">
+      <input type="text" placeholder="Name">
+      <input type="text" placeholder="Occupation">
+      <input type="text" placeholder="Short bio">
+      <input type="submit" value="Create Card">
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

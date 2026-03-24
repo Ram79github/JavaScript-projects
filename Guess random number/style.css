@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+  --primary: #2291e1;
+  --primary-hover: #2452b6;
+  --secondary: #ce3d15;
+  --bg-color: #0f172a;
+  --glass-bg: rgba(30, 41, 59, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background animated elements for that "WOW" factor */
+body::before, body::after {
+  content: '';
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  animation: float 12s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+body::before {
+  background: var(--primary);
+  top: -20%;
+  left: -10%;
+}
+
+body::after {
+  background: var(--secondary);
+  bottom: -20%;
+  right: -10%;
+  animation-delay: -6s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(15%, 15%) scale(1.15); }
+}
+
+.container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  padding: 3rem 2.5rem;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 10;
+}
+
+.container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 15px rgba(165, 180, 252, 0.2);
+  letter-spacing: -0.02em;
+}
+
+input[type="number"] {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.2rem;
+  font-size: 1.25rem;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 4px 6px rgba(0,0,0,0.3);
+}
+
+input[type="number"]:focus {
+  border-color: var(--primary);
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25), inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+input[type="number"]::placeholder {
+  color: #64748b;
+  font-weight: 400;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+button {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 20px -10px var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-20deg);
+  transition: .5s;
+  z-index: -1;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 25px -10px var(--primary), 0 0 20px rgba(236, 72, 153, 0.5);
+}
+
+button:hover:not(:disabled)::before {
+  left: 150%;
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px) scale(0.98);
+}
+
+button:disabled {
+  background: #334155;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Specific styling for the Play Again button to differentiate it */
+button:not(#btn) {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 10px 20px -10px #10b981;
+}
+
+button:not(#btn):hover {
+  box-shadow: 0 15px 25px -10px #10b981, 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+#message {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  min-height: 1.8rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  letter-spacing: 0.02em;
+}
+
+/* Enhance inline styles set by JS */
+#message[style*="red"] {
+  color: #fb7185 !important; /* Softer, glowing red for dark theme */
+  text-shadow: 0 0 12px rgba(251, 113, 133, 0.6) !important;
+}
+
+#message[style*="green"] {
+  color: #34d399 !important; /* Vibrant green for win state */
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.6) !important;
+  animation: pulseGreen 1.5s infinite alternate;
+}
+
+@keyframes pulseGreen {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+#attempts {
+    display: none;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#prevguess {
+    display: none;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  word-wrap: break-word;
+  min-height: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.4);
+}

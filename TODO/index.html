@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>My Tasks</h1>
+        <div class="menu-container">
+          <button id="menu-btn" class="menu-btn" aria-label="Menu">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="5" r="1.5"></circle>
+              <circle cx="12" cy="12" r="1.5"></circle>
+              <circle cx="12" cy="19" r="1.5"></circle>
+            </svg>
+          </button>
+          <div id="dropdown" class="dropdown">
+            <button id="theme-toggle">Toggle Dark Mode</button>
+          </div>
+        </div>
+      </div>
+      <div class="input">
+        <input id="inp" placeholder="What needs to be done?" />
+        <button id="btn">Add Task</button>
+      </div>
+      <ul id="list">
+        <!-- JS will populate list here -->
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

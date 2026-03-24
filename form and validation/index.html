@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+<h2>Registration Form</h2>
+
+<form id="myForm">
+
+<label>Full Name</label>
+<input required type="text" id="name">
+<div class="error" id="nameError"></div>
+
+<label>Email</label>
+<input required type="text" id="email">
+<div class="error" id="emailError"></div>
+
+<label>Password</label>
+<input required type="password" id="password">
+<div class="error" id="passError"></div>
+
+<label>
+<input required type="checkbox" id="terms"> I agree to Terms
+</label>
+<div class="error" id="termsError"></div>
+
+<button type="submit">Submit</button>
+
+<div id="successMsg" class="success"></div>
+</form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
