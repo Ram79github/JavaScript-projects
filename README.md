@@ -13,6 +13,12 @@ Here is a list of the projects included in this repository:
 5. **Download UI**: A modern user interface component simulating a file download progress.
 6. **Form and validation**: A complete web form with robust client-side JavaScript validation.
 7. **User finder**: An application to search and display user profiles.
+8. **Kanban Board** (`JavaScript logic building proj1`): A fully interactive drag-and-drop Kanban board with three columns (To Do, In Progress, Done). Features include:
+   - Add tasks via a modal with a title and description
+   - Drag tasks between columns with visual highlight feedback
+   - Delete individual tasks with a single click
+   - Live task counter per column
+   - Full `localStorage` persistence — tasks survive page refreshes
 
 ## 🛠️ Technologies Used
 
